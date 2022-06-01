@@ -1061,6 +1061,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 336159529}
+  - component: {fileID: 336159534}
   - component: {fileID: 336159532}
   - component: {fileID: 336159531}
   - component: {fileID: 336159530}
@@ -1167,6 +1168,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &336159534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336159528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85464658be2b6b441bb03d20c2bda7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 336159533}
+  defaultPos: {x: 0, y: 0, z: 0}
 --- !u!1 &394168894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,7 +1696,6 @@ MonoBehaviour:
   - {fileID: 1476104195}
   - {fileID: 1339723098}
   - {fileID: 1423275167}
-  defaultStumpPositions: []
 --- !u!1 &574845919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,6 +2388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848647568}
+  - component: {fileID: 848647573}
   - component: {fileID: 848647571}
   - component: {fileID: 848647570}
   - component: {fileID: 848647569}
@@ -2480,6 +2495,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &848647573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848647567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85464658be2b6b441bb03d20c2bda7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 848647572}
+  defaultPos: {x: 0, y: 0, z: 0}
 --- !u!1 &869761151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2978,7 +3007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9733611f35f9b40bd326c9c7ab5180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1726169248}
   defaultPosition: {x: 0, y: 11.8, z: -4.33}
   afterBallHitPosition: {x: 10, y: 20, z: -20}
   zoomedViewPosition: {x: 0, y: 0, z: 0}
@@ -3363,14 +3391,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14599f802aedb8744b60305f781222be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1726169248}
   batSpeed: 10
   batElevation: 0
   boundaryPointX: 4.5
   batsmanReachLimitMin: 16.8
   batsmanReachLimitMax: 20
   ballsPositionAtHit: {x: 0, y: 0, z: 0}
-  isBallInHittingRange: 0
 --- !u!1 &1103156893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,6 +3655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1339723099}
+  - component: {fileID: 1339723104}
   - component: {fileID: 1339723102}
   - component: {fileID: 1339723101}
   - component: {fileID: 1339723100}
@@ -3735,6 +3762,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1339723104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339723098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85464658be2b6b441bb03d20c2bda7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 1339723103}
+  defaultPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1350179976
 GameObject:
   m_ObjectHideFlags: 0
@@ -4056,6 +4097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1378428857}
+  - component: {fileID: 1378428862}
   - component: {fileID: 1378428860}
   - component: {fileID: 1378428859}
   - component: {fileID: 1378428858}
@@ -4162,6 +4204,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1378428862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378428856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85464658be2b6b441bb03d20c2bda7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 1378428861}
+  defaultPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1398689123
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,6 +4310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423275168}
+  - component: {fileID: 1423275173}
   - component: {fileID: 1423275171}
   - component: {fileID: 1423275170}
   - component: {fileID: 1423275169}
@@ -4360,6 +4417,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1423275173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423275167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85464658be2b6b441bb03d20c2bda7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 1423275172}
+  defaultPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1440655803
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,6 +4644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476104196}
+  - component: {fileID: 1476104201}
   - component: {fileID: 1476104199}
   - component: {fileID: 1476104198}
   - component: {fileID: 1476104197}
@@ -4679,6 +4751,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1476104201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476104195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85464658be2b6b441bb03d20c2bda7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 1476104200}
+  defaultPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1517137600
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,9 +4849,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1726169250}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ThrowBall
+      - m_Target: {fileID: 1313351384}
+        m_TargetAssemblyTypeName: Games2Win.CanvasManagerScript, Assembly-CSharp
+        m_MethodName: OnClickBowl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
