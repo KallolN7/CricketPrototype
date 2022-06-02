@@ -5,6 +5,9 @@ using System;
 
 namespace Games2Win
 {
+    /// <summary>
+    /// Script attached to individual stumps. Stumps take action independently based on events they are subscribed to.
+    /// </summary>
     public class StumpsItem : MonoBehaviour
     {
         [SerializeField] private Rigidbody rigidbody;
@@ -17,14 +20,23 @@ namespace Games2Win
             defaultPos = this.transform.position;
         }
 
+        /// <summary>
+        /// Subscribing methods to events
+        /// </summary>
         private void OnEnable()
         {
             EventManager.AddListener(EventID.Reset, OnReset);
+            EventManager.AddListener(EventID.HitStumps, OnHitStumps);
         }
 
+
+        /// <summary>
+        /// Un-Subscribing methods from events
+        /// </summary>
         private void OnDisable()
         {
             EventManager.RemoveListener(EventID.Reset, OnReset);
+            EventManager.AddListener(EventID.HitStumps, OnHitStumps);
         }
 
         #endregion
@@ -32,6 +44,11 @@ namespace Games2Win
 
         #region Private Regions
 
+
+        /// <summary>
+        /// Resetting stump properties
+        /// </summary>
+        /// <param name="arg"></param>
         private void OnReset(System.Object arg)
         {
             rigidbody.velocity = Vector3.zero; // reset the stump's velocity to zero
@@ -39,6 +56,16 @@ namespace Games2Win
             rigidbody.useGravity = false; // reset stump's to not get affected by gravity
             transform.position = defaultPos; // reset the stump's position
             transform.rotation = Quaternion.identity; // reset the stump's rotation
+        }
+
+        /// <summary>
+        /// Enabling gravity on stmps being hit
+        /// </summary>
+        /// <param name="arg"></param>
+        private void OnHitStumps(System.Object arg)
+        {
+            if(this.gameObject == (GameObject)arg)
+            rigidbody.useGravity = true;
         }
 
         #endregion

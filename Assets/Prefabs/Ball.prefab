@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 3247082222590170707}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &3247082221630737044
 Rigidbody:
@@ -76,10 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4022c6ddb9cde40bc66d977a19eec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPosition: {x: 0, y: 0, z: 0}
-  ball: {fileID: 1347934854007724, guid: c5e5155660cd83747b5e4b726b2e6022, type: 3}
-  bounceScalar: 0.08
-  spinScalar: 10
+  gameData: {fileID: 11400000, guid: 6e47efc3f8d42724faf717b7a42ce6de, type: 2}
+  rb: {fileID: 3247082221630737044}
 --- !u!1 &3247082222590170704
 GameObject:
   m_ObjectHideFlags: 0

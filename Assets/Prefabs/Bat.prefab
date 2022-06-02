@@ -32,7 +32,7 @@ Transform:
   - {fileID: 387673000124705927}
   - {fileID: 387673001379024248}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &387672999527741982
 MonoBehaviour:
@@ -46,11 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14599f802aedb8744b60305f781222be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batSpeed: 10
-  batElevation: 0
-  boundaryPointX: 4.5
-  batsmanReachLimitMin: 16.8
-  batsmanReachLimitMax: 20
+  gameData: {fileID: 11400000, guid: 6e47efc3f8d42724faf717b7a42ce6de, type: 2}
   ballsPositionAtHit: {x: 0, y: 0, z: 0}
 --- !u!1 &387673000124705926
 GameObject:
