@@ -104,6 +104,7 @@ namespace Games2Win
     public enum EventID
     {
       Reset,
+      DragMarker,
       BallHit,
       BallBowled,
       BallEnterHitZone,

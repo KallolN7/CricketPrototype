@@ -10,12 +10,12 @@ namespace Games2Win
 	public class MarkerDraggerScript : MonoBehaviour, IBeginDragHandler, IDragHandler
 	{
 
-		public GameObject marker; // marker game object
-		public float boundaryPointX; // max x value the marker can cover
-		public float minBoundaryPointZ; // min z value the marker can cover
-		public float maxBoundaryPointZ; // max z value the marker can cover
-
-		public float scaleDownDragBy; // value for scaling down the touch drag value to an appropriate the world value
+		[SerializeField] private GameObject marker; // marker game object
+		[SerializeField] private float boundaryPointX; // max x value the marker can cover
+		[SerializeField] private float minBoundaryPointZ; // min z value the marker can cover
+		[SerializeField] private float maxBoundaryPointZ; // max z value the marker can cover
+		[SerializeField] private float scaleDownDragBy; // value for scaling down the touch drag value to an appropriate the world value
+		
 		private bool IsBallThrown;
 		private Vector2 startTouchPosition; // start touch position of the drag
 		private Vector3 markerStartTouchPosition; // marker's position at the start of the drag
@@ -45,11 +45,16 @@ namespace Games2Win
 			EventManager.RemoveListener(EventID.BallBowled, OnBallBowled);
 		}
 
-		#endregion
+        private void Start()
+        {
+			EventManager.TriggerEvent(EventID.DragMarker, marker.transform.position);
+        }
 
-		#region Public Regions
+        #endregion
 
-		public void OnDrag(PointerEventData eventData)
+        #region Public Regions
+
+        public void OnDrag(PointerEventData eventData)
 		{
 			if (!IsBallThrown)
 			{ // if the ball is not thrown the marker can be moved
@@ -64,6 +69,7 @@ namespace Games2Win
 				marker.transform.position = new Vector3(Mathf.Clamp(marker.transform.position.x, -boundaryPointX, boundaryPointX),
 				marker.transform.position.y,
 				Mathf.Clamp(marker.transform.position.z, minBoundaryPointZ, maxBoundaryPointZ));
+				EventManager.TriggerEvent(EventID.DragMarker, marker.transform.position);
 			}
 		}
 

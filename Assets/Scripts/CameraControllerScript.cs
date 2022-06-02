@@ -24,19 +24,6 @@ namespace Games2Win
 		private const int ballZThreshold = 8;  //z position of ball at which the camera starts to zoom 
 		private const int minInterpolationValue = 1; //minimum interpolation value
 
-		public bool IsBallHit
-		{
-			set
-			{
-				isBallHit = value;
-				if (value)
-				{
-					startPosition = transform.position; // reset startPositon to the current camera's position
-				}
-			}
-		}
-
-
 		#region Mono Methods
 
 		void Awake()
@@ -49,14 +36,14 @@ namespace Games2Win
 		private void OnEnable()
         {
 			EventManager.AddListener(EventID.Reset, OnReset);
-			EventManager.AddListener(EventID.BallHit, OnBallHit);
+			EventManager.AddListener(EventID.BatSwing, OnBallHit);
 			EventManager.AddListener(EventID.BallExitHitZone, OnBallExitHittingZone);
 		}
 
         private void OnDisable()
         {
 			EventManager.RemoveListener(EventID.Reset, OnReset);
-			EventManager.RemoveListener(EventID.BallHit, OnBallHit);
+			EventManager.RemoveListener(EventID.BatSwing, OnBallHit);
 			EventManager.RemoveListener(EventID.BallExitHitZone, OnBallExitHittingZone);
 		}
 
@@ -94,7 +81,7 @@ namespace Games2Win
 
 		private void OnBallHit(System.Object obj)
         {
-            IsBallHit = true; // set CameraControllerScript's isBallHit to true
+            isBallHit = true; // set CameraControllerScript's isBallHit to true
 		}
 
 		private void OnBallExitHittingZone(object arg)
